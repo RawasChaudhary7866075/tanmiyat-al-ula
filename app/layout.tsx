@@ -5,7 +5,6 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 import WhatsAppFloat from "@/components/home/WhatsAppFloat";
 import "../styles/home.css";
 import GHLChatWidget from "@/components/shared/GHLChatWidget";
-import GHLChatbot from "@/components/shared/GHLChatbot";
 
 
 
@@ -39,7 +38,6 @@ export default function RootLayout({
 
         
         {children}
-        <GHLChatbot />
         <GHLChatWidget />
 
       </body>

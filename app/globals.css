@@ -4140,48 +4140,6 @@ justify-content:center;
 
 /* ===== CHATBOT WELCOME MESSAGE ===== */
 
-.ghl-chatbot-message {
-  position: fixed;
-
-  right: 24px;
-  bottom: 90px;
-
-  width: 380px;
-
-  background: #f3eee3;
-
-  color: #1d1d1d;
-
-  padding: 22px 28px;
-
-  border-radius: 24px;
-
-  font-size: 16px;
-  line-height: 1.7;
-
-  z-index: 9998;
-
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.12);
-}
-
-/* SINGLE POINTER */
-
-.ghl-chatbot-message-tail {
-  position: absolute;
-
-  right: 42px;
-  bottom: -8px;
-
-  width: 18px;
-  height: 18px;
-
-  background: #f3eee3;
-
-  transform: rotate(45deg);
-
-  border-radius: 2px;
-}
 
 
 
