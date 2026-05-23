@@ -41,6 +41,8 @@ export default function GHLChatbot() {
           Need help with maintenance,
           pricing, or property support?
 
+        <div className="ghl-chatbot-message-tail"></div>
+
         </div>
 
       )}
