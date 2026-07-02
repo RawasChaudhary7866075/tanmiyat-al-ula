@@ -37,7 +37,7 @@ export default function HomeNavbar() {
           <Link href="/">Home</Link>
           <Link href="/services">Services</Link>
           <Link href="/plans">Plans</Link>
-          <Link href="/calculator">Calculator</Link>
+          <Link href="/blog">Blog</Link>
           <Link href="/contact">Contact</Link>
         </div>
 

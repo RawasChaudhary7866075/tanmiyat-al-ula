@@ -1,0 +1,523 @@
+/* ═══════════════════════════════
+   SHARED
+═══════════════════════════════ */
+
+.blog-page .container,
+.blog-post-page .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+/* ═══════════════════════════════
+   BLOG — LISTING PAGE
+═══════════════════════════════ */
+
+.blog-page {
+  background: #04101f;
+  min-height: 100vh;
+}
+
+/* Hero */
+.blog-hero {
+  background: #04101f;
+  padding: 170px 0 90px;
+  text-align: center;
+  border-bottom: 1px solid rgba(212, 170, 74, 0.15);
+}
+
+.blog-hero-eyebrow {
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: #d4aa4a;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.blog-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2.4rem, 5vw, 3.6rem);
+  font-weight: 600;
+  color: #f5ede0;
+  margin: 0 0 20px;
+  line-height: 1.15;
+}
+
+.blog-hero h1 span {
+  color: #d4aa4a;
+}
+
+.blog-hero-sub {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.05rem;
+  color: rgba(245, 237, 224, 0.6);
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.7;
+}
+
+/* Grid Section */
+.blog-grid-section {
+  padding: 80px 0 100px;
+  background: #04101f;
+}
+
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+/* Card */
+.blog-card {
+  background: #07111b;
+  border: 1px solid rgba(212, 170, 74, 0.12);
+  border-radius: 6px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.blog-card:hover {
+  border-color: rgba(212, 170, 74, 0.4);
+  transform: translateY(-4px);
+}
+
+.blog-card-image {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  display: block;
+}
+
+.blog-card-body {
+  padding: 28px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.blog-card-category {
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #d4aa4a;
+  background: rgba(212, 170, 74, 0.1);
+  border: 1px solid rgba(212, 170, 74, 0.25);
+  border-radius: 3px;
+  padding: 4px 10px;
+  margin-bottom: 16px;
+  width: fit-content;
+}
+
+.blog-card-title {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  color: #f5ede0;
+  line-height: 1.3;
+  margin: 0 0 14px;
+}
+
+.blog-card-excerpt {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.88rem;
+  color: rgba(245, 237, 224, 0.55);
+  line-height: 1.75;
+  margin: 0 0 24px;
+  flex: 1;
+}
+
+.blog-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(212, 170, 74, 0.1);
+}
+
+.blog-card-meta {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(245, 237, 224, 0.4);
+}
+
+.blog-card-meta span + span::before {
+  content: " · ";
+}
+
+.blog-read-link {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d4aa4a;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: gap 0.2s ease;
+}
+
+.blog-read-link:hover {
+  gap: 10px;
+}
+
+.blog-read-link::after {
+  content: "→";
+}
+
+/* ═══════════════════════════════
+   BLOG — INDIVIDUAL POST PAGE
+═══════════════════════════════ */
+
+.blog-post-page {
+  background: #04101f;
+  min-height: 100vh;
+}
+
+/* Post Hero */
+.blog-post-hero {
+  background: #04101f;
+  padding: 160px 0 70px;
+  border-bottom: 1px solid rgba(212, 170, 74, 0.12);
+}
+
+.blog-post-hero-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.blog-post-breadcrumb {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.78rem;
+  color: rgba(245, 237, 224, 0.4);
+  margin-bottom: 22px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.blog-post-breadcrumb a {
+  color: rgba(245, 237, 224, 0.4);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.blog-post-breadcrumb a:hover {
+  color: #d4aa4a;
+}
+
+.blog-post-breadcrumb-sep {
+  opacity: 0.4;
+}
+
+.blog-post-category {
+  display: inline-block;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4aa4a;
+  background: rgba(212, 170, 74, 0.1);
+  border: 1px solid rgba(212, 170, 74, 0.25);
+  border-radius: 3px;
+  padding: 4px 10px;
+  margin-bottom: 20px;
+}
+
+.blog-post-hero h1 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(2rem, 4.5vw, 3rem);
+  font-weight: 600;
+  color: #f5ede0;
+  margin: 0 0 24px;
+  line-height: 1.2;
+}
+
+.blog-post-meta {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.85rem;
+  color: rgba(245, 237, 224, 0.45);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.blog-post-meta-sep {
+  opacity: 0.4;
+}
+
+/* Feature Image */
+.blog-post-image-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 50px 24px 0;
+}
+
+.blog-post-feature-image {
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  border: 1px solid rgba(212, 170, 74, 0.12);
+}
+
+/* Article Body */
+.blog-post-article {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 60px 24px 80px;
+}
+
+.blog-post-intro {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.08rem;
+  line-height: 1.85;
+  color: rgba(245, 237, 224, 0.75);
+  margin-bottom: 36px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(212, 170, 74, 0.1);
+}
+
+.blog-post-h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.5rem, 3vw, 1.9rem);
+  font-weight: 600;
+  color: #f5ede0;
+  margin: 48px 0 18px;
+  line-height: 1.25;
+  padding-left: 18px;
+  border-left: 3px solid #d4aa4a;
+}
+
+.blog-post-paragraph {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.97rem;
+  line-height: 1.9;
+  color: rgba(245, 237, 224, 0.65);
+  margin: 0 0 22px;
+}
+
+.blog-post-list {
+  margin: 0 0 28px;
+  padding: 0;
+  list-style: none;
+}
+
+.blog-post-list-intro {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.97rem;
+  color: rgba(245, 237, 224, 0.65);
+  line-height: 1.9;
+  margin: 0 0 14px;
+}
+
+.blog-post-list li {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: rgba(245, 237, 224, 0.62);
+  padding: 10px 0 10px 26px;
+  position: relative;
+  border-bottom: 1px solid rgba(212, 170, 74, 0.07);
+}
+
+.blog-post-list li:last-child {
+  border-bottom: none;
+}
+
+.blog-post-list li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: #d4aa4a;
+  font-size: 0.88rem;
+  top: 11px;
+}
+
+.blog-post-callout {
+  background: rgba(212, 170, 74, 0.06);
+  border: 1px solid rgba(212, 170, 74, 0.22);
+  border-left: 4px solid #d4aa4a;
+  border-radius: 4px;
+  padding: 24px 28px;
+  margin: 32px 0;
+}
+
+.blog-post-callout-label {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4aa4a;
+  margin-bottom: 10px;
+}
+
+.blog-post-callout-text {
+  font-family: "Outfit", sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: rgba(245, 237, 224, 0.72);
+  margin: 0;
+}
+
+/* Post CTA */
+.blog-post-cta {
+  background: #07111b;
+  border-top: 1px solid rgba(212, 170, 74, 0.12);
+  padding: 70px 24px;
+  text-align: center;
+}
+
+.blog-post-cta h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: clamp(1.8rem, 3.5vw, 2.4rem);
+  font-weight: 600;
+  color: #f5ede0;
+  margin: 0 0 14px;
+}
+
+.blog-post-cta p {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: rgba(245, 237, 224, 0.55);
+  margin: 0 0 36px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7;
+}
+
+.blog-cta-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.blog-cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #d4aa4a;
+  color: #04101f;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 14px 28px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.blog-cta-primary:hover {
+  background: #e0bb62;
+}
+
+.blog-cta-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: #d4aa4a;
+  font-family: "Outfit", sans-serif;
+  font-size: 0.88rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  padding: 13px 24px;
+  border-radius: 4px;
+  border: 1px solid rgba(212, 170, 74, 0.35);
+  text-decoration: none;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+.blog-cta-secondary:hover {
+  border-color: #d4aa4a;
+  background: rgba(212, 170, 74, 0.05);
+}
+
+/* More Posts */
+.blog-more-section {
+  background: #04101f;
+  padding: 80px 0 100px;
+  border-top: 1px solid rgba(212, 170, 74, 0.08);
+}
+
+.blog-more-heading {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #f5ede0;
+  margin: 0 0 40px;
+  text-align: center;
+}
+
+.blog-more-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* ═══════════════════════════════
+   RESPONSIVE
+═══════════════════════════════ */
+
+@media (max-width: 1024px) {
+  .blog-grid,
+  .blog-more-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .blog-hero {
+    padding: 140px 0 60px;
+  }
+
+  .blog-grid,
+  .blog-more-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .blog-card-body {
+    padding: 22px 20px 26px;
+  }
+
+  .blog-post-hero {
+    padding: 130px 0 50px;
+  }
+
+  .blog-post-article {
+    padding: 40px 20px 60px;
+  }
+
+  .blog-post-h2 {
+    margin-top: 36px;
+  }
+
+  .blog-cta-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .blog-cta-primary,
+  .blog-cta-secondary {
+    justify-content: center;
+  }
+}

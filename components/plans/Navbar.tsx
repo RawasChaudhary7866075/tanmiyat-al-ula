@@ -11,7 +11,7 @@ export default function Navbar() {
         <a href="/plans" className="active">
           Plans
         </a>
-        <a href="/calculator">Calculator</a>
+        <a href="/blog">Blog</a>
         <a href="/contact">Contact</a>
       </div>
 
