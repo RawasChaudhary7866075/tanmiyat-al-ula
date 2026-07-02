@@ -1,3 +1,4 @@
+import HomeNavbar from "@/components/home/HomeNavbar";
 import ServicesHero from "@/components/services/ServicesHero";
 import ServicesTabs from "@/components/services/ServicesTabs";
 import ServiceDarkSection from "@/components/services/ServiceDarkSection";
@@ -9,6 +10,7 @@ import WhatsAppFloat from "@/components/home/WhatsAppFloat";
 export default function ServicesPage() {
   return (
     <>
+      <HomeNavbar />
       <main className="services-page">
         <ServicesHero />
 

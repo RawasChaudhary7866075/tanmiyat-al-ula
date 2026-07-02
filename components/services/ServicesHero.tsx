@@ -1,12 +1,8 @@
 "use client";
 
-import Link from "next/link";
-import HomeNavbar from "../home/HomeNavbar";
-
 export default function ServicesHero() {
   return (
     <section className="services-hero">
-      <HomeNavbar />
 
       <div className="services-hero-overlay" />
 

@@ -15,11 +15,46 @@ export default function GHLChatWidget() {
 
       if (ghlWidget) {
 
-        ghlWidget.style.bottom = "95px";
-        ghlWidget.style.right = "24px";
-        ghlWidget.style.zIndex = "9999";
+        ghlWidget.style.position = "fixed";
+        ghlWidget.style.top = "50%";
+        ghlWidget.style.marginTop = "5px";
+        ghlWidget.style.bottom = "auto";
+        ghlWidget.style.right = "18px";
+        ghlWidget.style.zIndex = "99998";
 
         clearInterval(interval);
+
+        // Auto-dismiss the greeting popup after 3 seconds
+        setTimeout(() => {
+          try {
+            const chatEl = document.querySelector("chat-widget") as any;
+            if (chatEl?.shadowRoot) {
+              const buttons = chatEl.shadowRoot.querySelectorAll(
+                "button"
+              ) as NodeListOf<HTMLElement>;
+
+              for (const btn of buttons) {
+                const cls = (btn.className || "").toLowerCase();
+                const label = (btn.getAttribute("aria-label") || "").toLowerCase();
+                const text = (btn.textContent || "").trim();
+
+                if (
+                  cls.includes("close") ||
+                  cls.includes("dismiss") ||
+                  label.includes("close") ||
+                  text === "×" ||
+                  text === "✕" ||
+                  text === "✖" ||
+                  text === "x" ||
+                  text === "X"
+                ) {
+                  btn.click();
+                  break;
+                }
+              }
+            }
+          } catch {}
+        }, 3000);
 
       }
 
