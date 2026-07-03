@@ -330,6 +330,12 @@ body{
   background:rgba(255,255,255,.08);
 
   border:1px solid rgba(196,154,60,.25);
+
+  /* button reset */
+  padding:0;
+  outline:none;
+  appearance:none;
+  -webkit-appearance:none;
 }
 
 .toggle-track.active{

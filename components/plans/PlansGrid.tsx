@@ -29,16 +29,18 @@ export default function PlansGrid() {
           Monthly
         </span>
 
-        <div
-          className={
-            yearly
-              ? "toggle-track active"
-              : "toggle-track"
-          }
-          onClick={() => setYearly(!yearly)}
+        <button
+          type="button"
+          className={yearly ? "toggle-track active" : "toggle-track"}
+          onClick={(e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            setYearly((v) => !v);
+          }}
+          aria-label="Toggle billing period"
         >
           <div className="toggle-thumb"></div>
-        </div>
+        </button>
 
         <span
           className={yearly ? "toggle-label active" : "toggle-label"}

@@ -22,6 +22,11 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Tanmiyat Ula",
   description: "Premium maintenance services",
+  icons: {
+    icon: [{ url: "/images/branding/tanmiyat-logo.png", type: "image/png" }],
+    shortcut: "/images/branding/tanmiyat-logo.png",
+    apple: "/images/branding/tanmiyat-logo.png",
+  },
 };
 
 export default function RootLayout({
