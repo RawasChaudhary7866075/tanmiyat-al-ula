@@ -32,7 +32,7 @@ export default function Icon() {
           justifyContent: "center",
         }}
       >
-        <img src={logoSrc} width={766} height={511} style={{ marginTop: 80 }} />
+        <img src={logoSrc} width={766} height={511} style={{ marginTop: 40 }} />
       </div>
     ),
     { width: 192, height: 192 }
