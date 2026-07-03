@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Outfit, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import WhatsAppFloat from "@/components/home/WhatsAppFloat";
 import "../styles/home.css";
 import GHLChatWidget from "@/components/shared/GHLChatWidget";
 
@@ -22,11 +21,6 @@ const cormorant = Cormorant_Garamond({
 export const metadata: Metadata = {
   title: "Tanmiyat Ula",
   description: "Premium maintenance services",
-  icons: {
-    icon: [{ url: "/images/branding/tanmiyat-logo.png", type: "image/png" }],
-    shortcut: "/images/branding/tanmiyat-logo.png",
-    apple: "/images/branding/tanmiyat-logo.png",
-  },
 };
 
 export default function RootLayout({
